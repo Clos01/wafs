@@ -1,0 +1,8 @@
+this is for this order list to show whats been posted 
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post}}
+  </li>
+  {{/each}}
+</ol>

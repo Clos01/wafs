@@ -1,0 +1,29 @@
+{{!-- creating the section page  --}}
+<section>
+    <h2> Create new post </h2>
+    <form class="new-post-form">
+
+
+    <div>
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" name="post-title">
+    </div>
+
+    <div>
+        <label for="post-text">Text</label>
+        <textarea name="post-text" id="post-text"></textarea>
+    </div>
+ <button type="submit" class="btn">Create</button>
+    </form>
+</section>
+{{#if posts.length}}
+<section>
+<h2> Your Posts</h2>
+<ol>
+{{#each posts as |post|}}
+</ol>
+<li>
+    {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>  
+</li>
+</section>
